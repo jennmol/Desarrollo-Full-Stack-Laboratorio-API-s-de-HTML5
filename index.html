@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Laboratorio API</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <h1>Reproducción de video</h1>
+    <p>Por favor, seleccione un archivo de video:</p>
+    <input type="file" id="videoFile" accept=".webm, .mp4, .ogv" onchange="showVideo(event)">
+    <div id="videoContainer">
+      <video id="videoPlayer" controls></video>
+      <div id="controls">
+        <button id="playButton"  onclick="document.getElementById('video').play();">Reproducir</button>
+        <button id="pauseButton" onclick="document.getElementById('video').pause();">Pausar</button>
+        <button id="volumeUpButton" onclick="document.getElementById('video').volume += 0.1;">Subir volumen</button>
+        <button id="volumeDownButton"  onclick="document.getElementById('video').volume -= 0.1;">Bajar volumen</button>
+      </div>
+    </div>
+    <div id="loadingMessage">Cargando video...</div>
+    <script src="script.js"></script>
+  </body>
+</html>
